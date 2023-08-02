@@ -1,357 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicerend Leren</title>
-    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-    <script src="jquery.js"></script>
-    <script src="semantic/semantic.min.js"></script>
-    <style type="text/css">
-        .ui.container {
-            text-align: center;
-        } 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musicerend Leren</title>
+  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <script src="jquery.js"></script>
+  <script src="semantic/semantic.min.js"></script>
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .ui.vertical.stripe .ui.container {
-            padding-top: 7em;
-        }
+    .ui.container {
+      text-align: center;
+    }
 
-        .ui.vertical.stripe img {
-            width: 40em;
-        }
+    .ui.button {
+      background-color: #FF914C;
+      color: white;
+    }
 
-        
-        .ui.container.belang .ui.header {
-            margin-bottom: 2em;
-        }
+    h3.ui.header {
+      font-size: 2.6em !important;
+      color: #2A2A46;
+    }
 
-        .ui.vertical.stripe .column img {
-            width: 10em;
-            height: 10em;
-        }
+    .ui.secondary.pointing.menu {
+      border: 0px !important;
+      margin-left: 21em !important;
+    }
 
-        .hidden.menu {
-          display: none;
-        }
+    .ui.top.fixed.menu .ui.container {
+      justify-content: center;
+    }
 
-        .masthead {
-            background-image: url('img/masthead.jpg') !important;
-            background-size: cover !important;
-        }
-    
-        .masthead.segment {
-          min-height: 700px;
-          padding: 1em 0em;
-        }
-        .masthead .logo.item img {
-          margin-right: 1em;
-        }
-        .masthead .ui.menu .ui.button {
-          margin-left: 0.5em;
-        }
-        .masthead h1.ui.header {
-          margin-top: 2em;
-          margin-bottom: 0.2em;
-          font-size: 4em;
-          font-weight: normal;
-        }
-        .masthead h2 {
-          font-size: 1.6em;
-          font-weight: normal;
-          width: 30em;
-          margin: auto;
-        }
-    
-        .ui.vertical.stripe {
-          padding: 8em 0em;
-        }
-        .ui.vertical.stripe h3 {
-          font-size: 2em;
-        }
-        .ui.vertical.stripe .button + h3,
-        .ui.vertical.stripe p + h3 {
-          margin-top: 3em;
-        }
-        .ui.vertical.stripe .floated.image {
-          clear: both;
-        }
-        .ui.vertical.stripe p {
-          font-size: 1.33em;
-        }
-        .ui.vertical.stripe .horizontal.divider {
-          margin: 3em 0em;
-        }
-    
-        .quote.stripe.segment {
-          padding: 0em;
-        }
-        .quote.stripe.segment .grid .column {
-          padding-top: 5em;
-          padding-bottom: 5em;
-        }
-    
-        .footer.segment {
-          padding: 5em 0em;
-        }
-    
-        .secondary.pointing.menu .toc.item {
-          display: none;
-        }
-    
-        @media only screen and (max-width: 700px) {
-          .ui.fixed.menu {
-            display: none !important;
-          }
-          .secondary.pointing.menu .item,
-          .secondary.pointing.menu .menu {
-            display: none;
-          }
-          .secondary.pointing.menu .toc.item {
-            display: block;
-          }
-          .masthead.segment {
-            min-height: 350px;
-          }
-          .masthead h1.ui.header {
-            font-size: 2em;
-            margin-top: 1.5em;
-          }
-          .masthead h2 {
-            margin-top: 0.5em;
-            font-size: 1.5em;
-          }
-        }
-    
-    
-      </style>
-      <script>
-      $(document)
-        .ready(function() {
-    
-          // fix menu when passed
-          $('.masthead')
-            .visibility({
-              once: false,
-              onBottomPassed: function() {
-                $('.fixed.menu').transition('fade in');
-              },
-              onBottomPassedReverse: function() {
-                $('.fixed.menu').transition('fade out');
-              }
-            })
-          ;
-    
-          // create sidebar and attach to menu open
-          $('.ui.sidebar')
-            .sidebar('attach events', '.toc.item')
-          ;
-    
-        })
-      ;
+    .ui.vertical.stripe .ui.container:not(:first-child) {
+      padding-top: 8em;
+    }
 
-      function hulpkaart_download() {
-        downloadURI('assets/Hulpkaart-Musicerend-leren.pdf', 'Hulpkaart-Musicerend-leren.pdf');
+    .ui.vertical.stripe img {
+      width: 40em;
+    }
+
+
+    .ui.container.belang .ui.header {
+      margin-bottom: 2em;
+    }
+
+    .ui.vertical.stripe .column img {
+      width: 10em;
+      height: 10em;
+    }
+
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead {
+      background-image: url('img/masthead.jpg') !important;
+      background-size: cover !important;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+
+    .masthead h1.ui.header {
+      margin-top: 2em;
+      margin-bottom: 0.2em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+
+    .masthead h2 {
+      font-size: 1.6em;
+      font-weight: normal;
+      width: 30em;
+      margin: auto;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
+      margin-top: 3em;
+    }
+
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
       }
 
-      function downloadURI(uri, name) {
-        var link = document.createElement("a");
-        link.download = name;
-        link.target = "_blank";
-        link.href = uri;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        delete link;
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+
+      .masthead.segment {
+        min-height: 350px;
+      }
+
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
     }
-      </script>
-    </head>
-    <body>
-    
-    <!-- Following Menu -->
-    <div class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a class="active item">Home</a>
-            <a class="item">Probleem</a>
-            <a class="item">Als Oplossing</a>
-            <a class="item">Belang</a>
-            <a class="item">Hulpkaart</a>
-            <a class="item">Lessen</a>
-            <a class="item">Bronnen</a>
-        </div>
+  </style>
+  <script>
+    $(document)
+      .ready(function () {
+
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function () {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+          ;
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar').sidebar('attach events', '.toc.item');
+
+        $('#hersen').popup({ position: 'right center' });
+        $('#tijd').popup({ position: 'right center' });
+        $('#21').popup({ position: 'left center' });
+        $('#functies').popup({ position: 'right center' });
+        $('#onderwijs').popup({ position: 'right center' });
+        $('#kansen').popup({ position: 'left center' });
+      })
+      ;
+
+    function hulpkaart_download() {
+      downloadURI('assets/Hulpkaart-Musicerend-leren.pdf', 'Hulpkaart-Musicerend-leren.pdf');
+    }
+
+    function les_download(i) {
+      switch (i) {
+        case 1:
+          downloadURI('assets/Lesfische-Guldensporenslag.pdf', 'Lesfische-Guldensporenslag.pdf');
+          break;
+        case 2:
+          downloadURI('assets/Lesfiche-La-Journée.pdf', 'Lesfiche-La-Journée.pdf');
+          break;
+        case 3:
+          downloadURI('assets/Lesfiche-Werkwoordspelling.pdf', 'Lesfiche-Werkwoordspelling.pdf');
+          break;
+      }
+    }
+
+    function downloadURI(uri, name) {
+      var link = document.createElement("a");
+      link.download = name;
+      link.target = "_blank";
+      link.href = uri;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      delete link;
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Following Menu -->
+  <div class="ui large top fixed hidden menu">
+    <div class="ui container">
+      <a class="item" href="#">Home</a>
+      <a class="item" href="#probleem">Probleem</a>
+      <a class="item" href="#oplossing">Als Oplossing</a>
+      <a class="item" href="#belang">Belang</a>
+      <a class="item" href="#hulpkaart">Hulpkaart</a>
+      <a class="item" href="#lessen">Lessen</a>
+      <a class="item" href="#bronnen">Bronnen</a>
     </div>
-    
-    <!-- Sidebar Menu -->
-    <div class="ui vertical inverted sidebar menu">
-        <a class="active item">Home</a>
-        <a class="item">Probleem</a>
-        <a class="item">Als Oplossing</a>
-        <a class="item">Belang</a>
-        <a class="item">Hulpkaart</a>
-        <a class="item">Lessen</a>
-        <a class="item">Bronnen</a>
-    </div>
-    
-    
-    <!-- Page Contents -->
-    <div class="pusher">
-      <div class="ui inverted vertical masthead center aligned segment">
-    
-        <div class="ui container">
-          <div class="ui large secondary inverted pointing menu">
-            <a class="toc item">
-              <i class="sidebar icon"></i>
-            </a>
-            <a class="active item">Home</a>
-            <a class="item">Probleem</a>
-            <a class="item">Als Oplossing</a>
-            <a class="item">Belang</a>
-            <a class="item">Hulpkaart</a>
-            <a class="item">Lessen</a>
-            <a class="item">Bronnen</a>
-          </div>
-        </div>
-    
-        <div class="ui text container">
-          <h1 class="ui inverted header">Musicerend Leren</h1>
-          <h2>Leerlingen van het lager onderwijs springen dikwijls een gat in de lucht als ze liedjes mogen zingen of met klanken mogen experimenteren in de klas. Musiceren heeft dan nog eens een positieve invloed op verschillende vlakken van de ontwikkeling van een kind. Wat nu als muziek zou kunnen worden ingezet bij anderen leergebieden zodat kinderen op een musicerende manier andere leerinhouden kunnen verwerken? Dat is nu juist wat het concept musicerend leren inhoudt.</h2>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <a class="item" href="#">Home</a>
+    <a class="item" href="#probleem">Probleem</a>
+    <a class="item" href="#oplossing">Als Oplossing</a>
+    <a class="item" href="#belang">Belang</a>
+    <a class="item" href="#hulpkaart">Hulpkaart</a>
+    <a class="item" href="#lessen">Lessen</a>
+    <a class="item" href="#bronnen">Bronnen</a>
+  </div>
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <a class="item" href="#">Home</a>
+          <a class="item" href="#probleem">Probleem</a>
+          <a class="item" href="#oplossing">Als Oplossing</a>
+          <a class="item" href="#belang">Belang</a>
+          <a class="item" href="#hulpkaart">Hulpkaart</a>
+          <a class="item" href="#lessen">Lessen</a>
+          <a class="item" href="#bronnen">Bronnen</a>
         </div>
       </div>
-    
-      <div class="ui vertical stripe segment">
-        <div class="ui text container">
-            <h3 class="ui header">Probleem</h3>
-            <p>Alhoewel integratie een term is die meer en meer gebruikt wordt in het lager onderwijs, zijn niet alle integratievormen even sterk uitgewerkt. Een integratievorm waarbij muziek als middel wordt ingezet bij andere leergebieden, zag ik echter niet in mijn opleiding, in het werkveld als in enige literatuur. Het concept musicerend leren kan dit hiaat opvullen.</p>  
-            <h3 class="ui header">Musicerend leren als oplossing</h3>
-            <p>Musicerend leren is muziek inzetten om cognitieve leeractiviteiten te ondersteunen, versnellen of te vergemakkelijken. De vooropgestelde doelstellingen worden daarbij minstens even snel of sneller bereikt. Hierbij is muziek een middel en geen doel op zich, dus er mogen ook geen doelstellingen voor muziek aanwezig zijn.</p>
-        </div>
-
-        <div class="ui container belang">
-            <note>TODO: MAAK interactable</note>
-            <h1 class="ui header">Belang van musicerend Leren</h1>
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <h4>Grote hersenactiviteit</h4>
-                    <img src="img/hersen.png" />
-                </div>
-                <div class="column">
-                    <h4>Tijdswinst</h4>
-                    <img src="img/tijd.png" />
-                </div>
-                <div class="column">
-                    <h4>21e-eeuwse vaardigheden</h4>
-                    <img src="img/21.png" />
-                </div>
-                <div class="column">
-                    <h4>Executieve functies</h4>
-                    <img src="img/functies.png" />
-                </div>
-                <div class="column">
-                    <h4>Kwaliteitsvol onderwijs</h4>
-                    <img src="img/onderwijs.png" />
-                </div>
-                <div class="column">
-                    <h4>Gelijke onderwijskansen</h4>
-                    <img src="img/kansen.png" />
-                </div>
-            </div>
-        </div>
 
       <div class="ui text container">
-        <h3 class="ui header">Hulpkaart musicerend leren</h3>
-        <p>Om zelf een les musicerend leren te ontwerpen, kan onderstaande hulpkaart een handige checklist zijn. De checklist bevat de voorwaarden waaraan een les musicerend leren moet voldoen.</p>
-        <img src="img/hulpkaart.png" />
-        <button class="ui button" onclick="hulpkaart_download()">Donwload Hulpkaart</button>
+        <h1 class="ui inverted header">Musicerend Leren</h1>
+        <h2>Leerlingen van het lager onderwijs springen dikwijls een gat in de lucht als ze liedjes mogen zingen of met
+          klanken mogen experimenteren in de klas. Musiceren heeft dan nog eens een positieve invloed op verschillende
+          vlakken van de ontwikkeling van een kind. Wat nu als muziek zou kunnen worden ingezet bij anderen leergebieden
+          zodat kinderen op een musicerende manier andere leerinhouden kunnen verwerken? Dat is nu juist wat het concept
+          musicerend leren inhoudt.</h2>
+      </div>
     </div>
 
-    <div class="ui text container">
+    <div id="probleem" class="ui vertical stripe segment">
+      <div class="ui text container">
+        <h3 class="ui header">Probleem</h3>
+        <p id="oplossing">Alhoewel integratie een term is die meer en meer gebruikt wordt in het lager onderwijs, zijn niet alle
+          integratievormen even sterk uitgewerkt. Een integratievorm waarbij muziek als middel wordt ingezet bij andere
+          leergebieden, zag ik echter niet in mijn opleiding, in het werkveld als in enige literatuur. Het concept
+          musicerend leren kan dit hiaat opvullen.</p>
+        <h3 class="ui header">Musicerend leren als oplossing</h3>
+        <p>Musicerend leren is muziek inzetten om cognitieve leeractiviteiten te ondersteunen, versnellen of te
+          vergemakkelijken. De vooropgestelde doelstellingen worden daarbij minstens even snel of sneller bereikt.
+          Hierbij is muziek een middel en geen doel op zich, dus er mogen ook geen doelstellingen voor muziek aanwezig
+          zijn.</p>
+      </div>
+
+      <div id="belang" class="ui container belang">
+        <h3 class="ui header">Belang van musicerend Leren</h3>
+        <div class="ui stackable three column grid">
+          <div class="column">
+            <h4>Grote hersenactiviteit</h4>
+            <img id="hersen" src="img/hersen.png" />
+            <div class="ui fluid large popup">De toevoeging van muziek bij het leren zorgt een voor de activatie van een
+              extra deel in de hersenen. Bijgevolg worden er meer verbindingen gemaakt waardoor leerinhouden later beter
+              en sneller worden opgehaald in de hersenen.</div>
+          </div>
+          <div class="column">
+            <h4>Tijdswinst</h4>
+            <img id="tijd" src="img/tijd.png" />
+            <div class="ui fluid large popup">Musicerend leren is een concept waarbij de vooropgestelde doelen minstens
+              even snel bereikt. De toevoeging van muziek is dus op korte termijn een tijdswinst. Aangezien de
+              leerinhouden ook beter onthouden worden, wordt er ook op lange termijn tijd gewonnen.</div>
+          </div>
+          <div class="column">
+            <h4>21e-eeuwse vaardigheden</h4>
+            <img id="21" src="img/21.png" />
+            <div class="ui fluid large popup">Musiceren bevordert enkele 21e-eeuwse vaardigheden, met name communiceren,
+              samenwerken, sociale en culturele vaardigheden en creatief denken. Ook bij musicerend leren wordt actief
+              met muziek aan de slag gegaan en wordt dus aan deze vaardigheden gewerkt.</div>
+          </div>
+          <div class="column">
+            <h4>Executieve functies</h4>
+            <img id="functies" src="img/functies.png" />
+            <div class="ui fluid large popup">Er zijn een aantal executieve functies die versterkt worden door te
+              musiceren, namelijk aandacht, werkgeheugen en emotieregulatie. Door musicerend leren in te zetten worden
+              deze functies onbewust versterkt.</div>
+          </div>
+          <div class="column">
+            <h4>Kwaliteitsvol onderwijs</h4>
+            <img id="onderwijs" src="img/onderwijs.png" />
+            <div class="ui fluid large popup">Musiceren bevordert vaardigheden en functies die bijdragen tot goed
+              onderwijs. Dit bestaat uit kwalificatie, socialisatie en subjectificatie. Aandacht en werkgeheugen dragen
+              bij tot kwalificatie. Verder zijn de communicerende, samenwerkende, sociale en culturele vaardigheden
+              bouwstenen tot socialisatie en tot slot zijn het reguleren van emoties en het creatief denken onderdelen
+              van subjectificatie.</div>
+          </div>
+          <div class="column">
+            <h4>Gelijke onderwijskansen</h4>
+            <img id="kansen" src="img/kansen.png" />
+            <div class="ui fluid large popup">Enerzijds is het positieve effect van muziek het groots bij kinderen met
+              achterstand of een vertraagde ontwikkeling. Anderzijds hebben sommige kinderen een vooral sterk
+              muzikaal-ritmische intelligentie. Dus, door af en toe muziek toe te voegen aan de leerinhouden, worden de
+              onderwijskansen meer gelijk.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="hulpkaart" class="ui text container">
+        <h3 class="ui header">Hulpkaart musicerend leren</h3>
+        <p>Om zelf een les musicerend leren te ontwerpen, kan onderstaande hulpkaart een handige checklist zijn. De
+          checklist bevat de voorwaarden waaraan een les musicerend leren moet voldoen.</p>
+        <img src="img/hulpkaart.png" />
+        <button class="ui button" onclick="hulpkaart_download()">Donwload Hulpkaart</button>
+      </div>
+
+      <div id="lessen" class="ui text container">
         <h3 class="ui header">Voorbeeldlessen</h3>
-        <p>Hieronder zijn drie lessen musicerend leren te vinden als voorbeeld voor elk kwadrant. Klik op de voorbeeldles om de lesfiche met de bijhorende materialen te downloaden.</p>
-        <table class="ui definition table">
-            <thead>
-              <tr>
-                <th></th>
+        <p>Hieronder zijn drie lessen musicerend leren te vinden als voorbeeld voor elk kwadrant. Klik op de
+          voorbeeldles om de lesfiche met de bijhorende materialen te downloaden.</p>
+        <table class="ui fixed celled definition table">
+          <thead>
+            <tr>
+              <th></th>
               <th>Media</th>
               <th>Wekrvorm</th>
             </tr>
-        </thead>
-            <tbody>
-              <tr>
-                <td>Zingen</td>
-                <td><button class="ui button">Les 1</button></td>
-                <td><button class="ui button">Les 2</button></td>
-              </tr>
-              <tr>
-                <td>Muziek maken met instrumenten en bodysound</td>
-                <td class="active"></td>
-                <td><button class="ui button">Les 3</button></td>
-              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zingen</td>
+              <td><button class="ui fluid button" onclick="les_download(1)">Guldensporenslag</button></td>
+              <td><button class="ui fluid button" onclick="les_download(2)">La-Journée</button></td>
+            </tr>
+            <tr>
+              <td>Muziek maken met instrumenten en bodysound</td>
+              <td class="active"></td>
+              <td><button class="ui fluid button" onclick="les_download(3)">Werkwoordspelling</button></td>
+            </tr>
           </tbody>
         </table>
-    </div>
-</div>
-    
-      <div class="ui vertical stripe quote segment">
-        <div class="ui equal width stackable internally celled grid">
-          <div class="center aligned row">
-            <div class="column">
-              <h3>"What a Company"</h3>
-              <p>That is what they all say about us</p>
-            </div>
-            <div class="column">
-              <h3>"I shouldn't have gone with their competitor."</h3>
-              <p>
-                <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
-    
-      <div class="ui vertical stripe segment">
-        <div class="ui text container">
-          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-          <a class="ui large button">Read More</a>
-          <h4 class="ui horizontal header divider">
-            <a href="#">Case Studies</a>
-          </h4>
-          <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-          <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-          <a class="ui large button">I'm Still Quite Interested</a>
-        </div>
-      </div>
-    
-    
-      <div class="ui inverted vertical footer segment">
-        <div class="ui container">
-          <div class="ui stackable inverted divided equal height stackable grid">
-            <div class="three wide column">
-              <h4 class="ui inverted header">About</h4>
-              <div class="ui inverted link list">
-                <a href="#" class="item">Sitemap</a>
-                <a href="#" class="item">Contact Us</a>
-                <a href="#" class="item">Religious Ceremonies</a>
-                <a href="#" class="item">Gazebo Plans</a>
-              </div>
-            </div>
-            <div class="three wide column">
-              <h4 class="ui inverted header">Services</h4>
-              <div class="ui inverted link list">
-                <a href="#" class="item">Banana Pre-Order</a>
-                <a href="#" class="item">DNA FAQ</a>
-                <a href="#" class="item">How To Access</a>
-                <a href="#" class="item">Favorite X-Men</a>
-              </div>
-            </div>
-            <div class="seven wide column">
-              <h4 class="ui inverted header">Footer Header</h4>
-              <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-            </div>
-          </div>
-        </div>
+
+      <div id="bronnen" class="ui text container">
+        <h3 class="ui header">Bronnen</h3>
       </div>
     </div>
-    
-    </body>
+</body>
 </html>
