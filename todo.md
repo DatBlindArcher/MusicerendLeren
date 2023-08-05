@@ -1,12 +1,12 @@
 # Layout Improvments:
 
-- Titel bovenaan kan beter
-- Menu met shadow
-- Masthead met shadow?
-- Titels gelijk trekken
-- Fonts
-- ScrollIn effecten?
+- Menu met shadow X
+- Masthead met shadow N
+- Titels gelijk trekken X
+- Fonts X
 - Wat verticale segmentatie
-- Cirkel iconen zijn niet gelijk
-- Scalability
-    - Sidebar is lelijk
+- Cirkel iconen zijn niet gelijk X
+
+- Titel bovenaan kan beter X
+- Scalability X
+    - Sidebar is lelijk X

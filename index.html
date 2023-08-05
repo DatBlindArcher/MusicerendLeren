@@ -14,6 +14,18 @@
       scroll-behavior: smooth;
     }
 
+    .ui.large.top.fixed.menu {
+      box-shadow: 0 3px 8px -4px gray;
+    }
+
+    .ui.vertical.inverted.sidebar.menu {
+      background-color: #FF914C;
+    }
+
+    .column h4 {
+      font-size: 2vh;
+    }
+
     .ui.container {
       text-align: center;
     }
@@ -29,13 +41,16 @@
     }
 
     h3.ui.header {
-      font-size: 2.6em !important;
+      font-size: 6vh !important;
       color: #2A2A46;
+      text-shadow: 0px 4px 8px darkgrey;
     }
 
-    .ui.secondary.pointing.menu {
+    .ui.large.secondary.pointing.menu {
       border: 0px !important;
-      margin-left: 21em !important;
+      position: absolute !important;
+      left: 35% !important;
+      font-size: 0.9vw !important;
     }
 
     .ui.top.fixed.menu .ui.container {
@@ -47,7 +62,8 @@
     }
 
     .ui.vertical.stripe img {
-      width: 40em;
+      max-width: 40em;
+      width: 100%;
     }
 
 
@@ -57,7 +73,7 @@
 
     .ui.vertical.stripe .column img {
       width: 10em;
-      height: 10em;
+      height: auto;
     }
 
     .hidden.menu {
@@ -70,7 +86,7 @@
     }
 
     .masthead.segment {
-      min-height: 700px;
+      min-height: 35vw;
       padding: 1em 0em;
     }
 
@@ -85,15 +101,27 @@
     .masthead h1.ui.header {
       margin-top: 2em;
       margin-bottom: 0.2em;
-      font-size: 4em;
       font-weight: normal;
+      font-size: 3vw;
+      text-shadow: 1px 2px 2px navajowhite;
+      position: absolute;
+      left: 35%;
+      right: 30%;
+      top: 0;
     }
 
     .masthead h2 {
-      font-size: 1.6em;
+      font-size: 1.4vw;
       font-weight: normal;
-      width: 30em;
+      position: absolute;
+      top: 35%;
+      left: 33%;
+      right: 28%;
       margin: auto;
+    }
+
+    .ui.text.container p i {
+      display: none;
     }
 
     .ui.vertical.stripe {
@@ -139,6 +167,30 @@
     }
 
     @media only screen and (max-width: 700px) {
+      .ui.large.secondary.pointing.menu {
+        border: 0px !important;
+        margin-left: 0% !important;
+      }
+ 
+      .masthead h1.ui.header {
+        margin-top: 2em;
+        margin-bottom: 0.2em;
+        font-weight: normal;
+        font-size: 3vw;
+        position: absolute;
+        left: 40%;
+        right: 30%;
+        top: 15%;
+      }
+      
+      .masthead h2 {
+        display: none;
+      }
+
+      .ui.text.container p i {
+        display: block;
+      }
+
       .ui.fixed.menu {
         display: none !important;
       }
@@ -234,7 +286,7 @@
     <div class="ui container">
       <a class="item" href="#">Home</a>
       <a class="item" href="#probleem">Probleem</a>
-      <a class="item" href="#oplossing">Als Oplossing</a>
+      <a class="item" href="#oplossing">Oplossing</a>
       <a class="item" href="#belang">Belang</a>
       <a class="item" href="#hulpkaart">Hulpkaart</a>
       <a class="item" href="#lessen">Lessen</a>
@@ -246,7 +298,7 @@
   <div class="ui vertical inverted sidebar menu">
     <a class="item" href="#">Home</a>
     <a class="item" href="#probleem">Probleem</a>
-    <a class="item" href="#oplossing">Als Oplossing</a>
+    <a class="item" href="#oplossing">Oplossing</a>
     <a class="item" href="#belang">Belang</a>
     <a class="item" href="#hulpkaart">Hulpkaart</a>
     <a class="item" href="#lessen">Lessen</a>
@@ -265,7 +317,7 @@
           </a>
           <a class="item" href="#">Home</a>
           <a class="item" href="#probleem">Probleem</a>
-          <a class="item" href="#oplossing">Als Oplossing</a>
+          <a class="item" href="#oplossing">Oplossing</a>
           <a class="item" href="#belang">Belang</a>
           <a class="item" href="#hulpkaart">Hulpkaart</a>
           <a class="item" href="#lessen">Lessen</a>
@@ -283,8 +335,16 @@
       </div>
     </div>
 
-    <div id="probleem" class="ui vertical stripe segment">
-      <div class="ui text container">
+    <div class="ui text container">
+      <p><i>Leerlingen van het lager onderwijs springen dikwijls een gat in de lucht als ze liedjes mogen zingen of met
+        klanken mogen experimenteren in de klas. Musiceren heeft dan nog eens een positieve invloed op verschillende
+        vlakken van de ontwikkeling van een kind. Wat nu als muziek zou kunnen worden ingezet bij anderen leergebieden
+        zodat kinderen op een musicerende manier andere leerinhouden kunnen verwerken? Dat is nu juist wat het concept
+        musicerend leren inhoudt.</i></p>
+    </div>
+
+    <div class="ui vertical stripe segment">
+      <div id="probleem" class="ui text container">
         <h3 class="ui header">Probleem</h3>
         <p id="oplossing">Alhoewel integratie een term is die meer en meer gebruikt wordt in het lager onderwijs, zijn niet alle
           integratievormen even sterk uitgewerkt. Een integratievorm waarbij muziek als middel wordt ingezet bij andere
